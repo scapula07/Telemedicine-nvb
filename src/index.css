@@ -8,7 +8,7 @@
 	}
 
   .btn{
-    @apply flex items-center justify-center text-base leading-5 capitalize rounded
+    @apply flex items-center justify-center text-base leading-5 capitalize rounded w-[210px] h-12 text-white;
   }
 
 	.error {
