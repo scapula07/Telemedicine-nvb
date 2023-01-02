@@ -7,6 +7,10 @@
 		@apply w-11/12 mx-auto;
 	}
 
+  .btn{
+    @apply flex items-center justify-center text-base leading-5 capitalize rounded
+  }
+
 	.error {
 		@apply border border-red-500;
 	}

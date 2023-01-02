@@ -1,7 +1,8 @@
-// images
-import logo from "@/assets/logo/telemed.svg";
 import { footerLinks, legalLinks } from "@/utils/data";
 import { Link } from "react-router-dom";
+
+// images
+import logo from "@/assets/logo/telemed.svg";
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
