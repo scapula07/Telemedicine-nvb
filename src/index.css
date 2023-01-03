@@ -4,7 +4,7 @@
 
 @layer components {
 	.layout-container {
-		@apply w-11/12 mx-auto;
+		@apply w-[90%] mx-auto;
 	}
 
   .btn{

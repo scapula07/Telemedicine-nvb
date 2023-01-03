@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 
 const Button = ({ href, title, className, ...props }) => {
 	return href ? (
-		<a className={twMerge(`${className}`)} {...{ href }}>
+		<a className={twMerge(`btn ${className}`)} {...{ href }}>
 			{title}
 		</a>
 	) : (

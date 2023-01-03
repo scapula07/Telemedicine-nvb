@@ -1,11 +1,15 @@
-import { Hero } from '@/components/section/home'
+import { HealthPlatform, Hero, NextGeneration, ServiceCare, WeCare } from "@/components/section/home";
 
 const Home = () => {
-  return (
-    <div className=''>
-        <Hero />
-    </div>
-  )
-}
+	return (
+		<div className="">
+			<Hero />
+			<ServiceCare />
+			<NextGeneration />
+			<HealthPlatform />
+			<WeCare />
+		</div>
+	);
+};
 
-export default Home
+export default Home;
