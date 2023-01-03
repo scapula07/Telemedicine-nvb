@@ -1,5 +1,5 @@
-import { footerLinks, legalLinks } from "@/utils/data";
 import { Link } from "react-router-dom";
+import { footerLinks, legalLinks } from "@/utils/data";
 
 // images
 import logo from "@/assets/logo/telemed.svg";
@@ -18,9 +18,9 @@ const Footer = () => {
 								<ul className="space-y-4">
 									{item.links.map((link, index) => (
 										<li key={index}>
-											<a href={link.to} className="font-medium">
+											<Link to={link.to} className="font-medium">
 												{link.name}
-											</a>
+											</Link>
 											{/* <Link
                                              to={link.to}>{link.name}</Link> */}
 										</li>
@@ -33,9 +33,9 @@ const Footer = () => {
 				<div className="mt-[50px] flex justify-between">
 					<div className="space-x-2">
 						{legalLinks.map((item, index) => (
-							<a href={item.to} key={index}>
+							<Link to={item.to} key={index}>
 								{item.name}
-							</a>
+							</Link>
 						))}
 					</div>
 					<p>© {currentYear} Scapula Labs | All rights reserved. </p>
