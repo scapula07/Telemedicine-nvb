@@ -12,7 +12,7 @@ const TextInput = ({
 	...props
 }) => {
 	return (
-		<div className="w-full">
+		<div >
 			{label ? (
 				<label
 					htmlFor={id}

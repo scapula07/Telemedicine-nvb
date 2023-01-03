@@ -13,8 +13,8 @@ const AppRouter = () => {
 					<Route index element={<Home />} />
 				</Route>
 				<Route element={<DashboardLayout />}>
-					<Route path={links.doctors} element={<Doctors />} />
-					<Route path={`${links.doctors}/:id`} element={<Doctor />} />
+					<Route path="/doctors" element={<Doctors />} />
+					<Route path="doctors/:id" element={<Doctor />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

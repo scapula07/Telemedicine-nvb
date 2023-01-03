@@ -14,7 +14,7 @@ const Doctor = () => {
 	const [amount, setAmount] = useState(scheduleDetails[activeIndex].amount);
 	const [showBookAppointment, setShowBookAppointment] = useState(false);
 	const [showBookAppointmentSuccess, setShowBookAppointmentSuccess] =
-		useState(true);
+		useState(false);
 	const [formData, setFormData] = useState({
 		date: value,
 		time: scheduleDetails[activeIndex]?.time,

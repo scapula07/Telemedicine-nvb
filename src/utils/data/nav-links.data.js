@@ -7,14 +7,14 @@ export const links = {
 export const navLinks = [
 	{
 		name: "doctors",
-		to: links.doctors
+		to: "/doctors"
 	},
 	{
 		name: "appointment",
-		to: links.appointment
+		to: "/appointment"
 	},
 	{
 		name: "message",
-		to: links.message
+		to: "/message"
 	}
 ];
