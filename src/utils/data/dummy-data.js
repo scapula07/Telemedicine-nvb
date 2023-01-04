@@ -24,6 +24,56 @@ export const patientList = new Array(20).fill({
 	]
 });
 
+export const patientDetails = [
+	{
+		title: "date of birth",
+		description: "23/04/1994"
+	},
+	{
+		title: "phone number",
+		description: "+234643372892"
+	},
+	{
+		title: "gender",
+		description: "male"
+	},
+	{
+		title: "insurance",
+		description: "yes"
+	},
+	{
+		title: "marital status",
+		description: "single"
+	},
+	{
+		title: "address",
+		description: "paris, France"
+	},
+	{
+		title: "registered on",
+		description: "3 oct,2023"
+	},
+	{
+		title: "date of birth",
+		description: "23/04/1994"
+	}
+];
+
+export const patientMedicalRecord = [
+	{
+		title: "date",
+		description: "10/02/2022"
+	},
+	{
+		title: "diagnosis",
+		description: "Fever"
+	},
+	{
+		title: "specialist",
+		description: "10/02/2022"
+	},
+];
+
 export const scheduleDetails = [
 	{
 		amount: "$40",
@@ -37,4 +87,10 @@ export const scheduleDetails = [
 		amount: "$18",
 		time: "08:00PM -08:30PM"
 	}
+];
+
+export const patientDocuments = [
+	"ECG report.jpg",
+	"medical prescription.pdf",
+	"X-ray scan.pdf"
 ];
