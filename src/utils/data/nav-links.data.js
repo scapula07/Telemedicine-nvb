@@ -15,8 +15,8 @@ export const navLinks = [
 		to: "/patients"
 	},
 	{
-		name: "appointment",
-		to: "/appointment"
+		name: "profile",
+		to: "/profile"
 	},
 	{
 		name: "message",
