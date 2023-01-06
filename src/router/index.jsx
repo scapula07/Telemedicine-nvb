@@ -1,6 +1,14 @@
 import DashboardLayout from "@/components/dashboard-layout";
 import Layout from "@/components/layout";
-import { Doctor, Doctors, Home, Message, Patient, Patients } from "@/pages";
+import {
+	Doctor,
+	Doctors,
+	Home,
+	Message,
+	Patient,
+	Patients,
+	VideoCall
+} from "@/pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const AppRouter = () => {
@@ -16,6 +24,7 @@ const AppRouter = () => {
 					<Route path="/Patients" element={<Patients />} />
 					<Route path="Patients/:id" element={<Patient />} />
 					<Route path="/message" element={<Message />} />
+					<Route path="/video-call" element={<VideoCall />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

@@ -17,6 +17,7 @@ import calendarIcon from "@/assets/icons/calendar.svg";
 import plusIcon from "@/assets/icons/plus.svg";
 import documentIcon from "@/assets/icons/document.svg";
 import downloadIcon from "@/assets/icons/download.svg";
+import { Link } from "react-router-dom";
 
 const Patient = () => {
 	const [value, onChange] = useState(new Date());
@@ -51,11 +52,13 @@ const Patient = () => {
 							alt=""
 							className="cursor-pointer h-8 w-8"
 						/>
-						<img
-							src={videoCallIcon}
-							alt=""
-							className="cursor-pointer h-8 w-8"
-						/>
+						<Link to="/video-call">
+							<img
+								src={videoCallIcon}
+								alt=""
+								className="cursor-pointer h-8 w-8"
+							/>
+						</Link>
 					</div>
 				</div>
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TextInput } from "@/components/input";
 import { chatMessages } from "@/utils/data/dummy-data";
+import { Link } from "react-router-dom";
 
 // images
 import avatar from "@/assets/avatar/1.svg";
@@ -29,11 +30,14 @@ const MainChat = () => {
 					</div>
 					<div className="flex items-center">
 						<img src={phoneCallIcon} alt="" className="cursor-pointer mr-6" />
-						<img
-							src={videoCallIcon}
-							alt=""
-							className="cursor-pointer mr-[35px]"
-						/>
+						<Link to="/video-call">
+							<img
+								src={videoCallIcon}
+								alt=""
+								className="cursor-pointer mr-[35px]"
+							/>
+						</Link>
+
 						<img src={threeDotsIcon} alt="" className="cursor-pointer" />
 					</div>
 				</div>
