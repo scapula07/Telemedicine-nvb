@@ -1,13 +1,13 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
+import { Button } from "../input";
 
 // images
 import closeIcon from "@/assets/icons/close.svg";
 import documentIcon from "@/assets/icons/document.svg";
-import { Button } from "../input";
 
 const AddReport = ({ showAddMedicalRecord, setShowAddMedicalRecord }) => {
-	const handleClose = () => setShowAddMedicalRecord;
+	const handleClose = () => setShowAddMedicalRecord(false);
 	return (
 		<Transition appear show={showAddMedicalRecord} as={Fragment}>
 			<Dialog
