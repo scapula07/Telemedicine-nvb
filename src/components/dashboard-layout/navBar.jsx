@@ -7,7 +7,7 @@ import logo from "@/assets/logo/telemed.svg";
 
 const NavBar = () => {
 	return (
-		<div className="layout-container py-4 flex items-center justify-between">
+		<div className="layout-container h-[76px] flex items-center justify-between">
 			<Link to="/">
 				<img src={logo} alt="" className="w-[132px] h-[26px]" />
 			</Link>

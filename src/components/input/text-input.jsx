@@ -9,10 +9,11 @@ const TextInput = ({
 	id,
 	name,
 	labelClassName,
+	mainContainerClassName,
 	...props
 }) => {
 	return (
-		<div >
+		<div className={`${mainContainerClassName}`}>
 			{label ? (
 				<label
 					htmlFor={id}
@@ -23,14 +24,14 @@ const TextInput = ({
 			) : null}
 			<div
 				className={twMerge(
-					`border border-[#E8E8EF] px-3 py-4 rounded-[5px] flex items-center space-x-3  w-full ${containerClassName}`
+					`border border-[#E8E8EF] px-3 py-3 flex  rounded-[5px] space-x-3 ${containerClassName}`
 				)}
 			>
 				{icon ? <img src={icon} alt="" className="w-[23px] h-6" /> : null}
 				<input
 					onChange={handleTextChange}
 					{...{ name, id, ...props }}
-					className="text-[#656B8A] flex-1 text-base leading-[18px] focus:outline-none"
+					className="text-[#656B8A] w-full text-base leading-[18px] focus:outline-none"
 				/>
 			</div>
 		</div>

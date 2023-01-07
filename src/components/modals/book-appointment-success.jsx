@@ -2,7 +2,6 @@ import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment } from "react";
 
 // images
-import closeIcon from "@/assets/icons/close.svg";
 import successIcon from "@/assets/icons/success.svg";
 import { Button } from "../input";
 
