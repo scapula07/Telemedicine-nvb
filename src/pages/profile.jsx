@@ -1,14 +1,25 @@
-import { patientDetails, patientMedicalRecord } from "@/utils/data/dummy-data";
+import { useState } from "react";
+import { patientDetails } from "@/utils/data/dummy-data";
+import { MedicalRecordsList } from "@/components/section/profile";
+import { Nothing } from "@/components/misc";
+import { AddReport, EditProfile } from "@/components/modals";
+
 // images
 import avatar from "@/assets/avatar/1.svg";
 import editIcon from "@/assets/icons/edit-icon.svg";
 import plusIcon from "@/assets/icons/plus.svg";
-import downloadIcon from "@/assets/icons/download.svg";
-import { Nothing } from "@/components/misc";
 
 const Profile = () => {
+	const [showAddMedicalRecord, setShowAddMedicalRecord] = useState(false);
+	const [showEditProfile, setShowEditProfile] = useState(false);
+
+	const handleShowAddMedicalRecord = () => setShowAddMedicalRecord(true);
+	const handleShowEditProfile = () => setShowEditProfile(true);
+
 	return (
 		<main className="bg-[#FCFCFC] pb-16">
+			<AddReport {...{ showAddMedicalRecord, setShowAddMedicalRecord }} />
+			<EditProfile {...{ showEditProfile, setShowEditProfile }} />
 			<div className="w-[950px] mx-auto">
 				{/* profile */}
 				<div className="bg-[#FFFFFF] mb-6 rounded-lg px-6 py-8">
@@ -20,7 +31,10 @@ const Profile = () => {
 								balabulu bulublu
 							</h1>
 						</div>
-						<button className="flex justify-center items-center space-x-[7px] capitalize text-[#49497D] text-base leading-[18px] border border-[#E8E8EF] rounded w-[141px] h-[41px]">
+						<button
+							onClick={handleShowEditProfile}
+							className="flex justify-center items-center space-x-[7px] capitalize text-[#49497D] text-base leading-[18px] border border-[#E8E8EF] rounded w-[141px] h-[41px]"
+						>
 							<img src={editIcon} alt="" />
 							<p className="">edit profile</p>
 						</button>
@@ -59,7 +73,10 @@ const Profile = () => {
 						<h1 className="font-bold text-[22px] leading-[25px] capitalize text-[#1F1F1F]">
 							medical record
 						</h1>
-						<button className="flex justify-center items-center space-x-[7px] capitalize text-[#49497D] text-base leading-[18px] border border-[#E8E8EF] rounded w-[141px] h-[41px]">
+						<button
+							onClick={handleShowAddMedicalRecord}
+							className="flex justify-center items-center space-x-[7px] capitalize text-[#49497D] text-base leading-[18px] border border-[#E8E8EF] rounded w-[141px] h-[41px]"
+						>
 							<img src={plusIcon} alt="" />
 							<p className="capitalize text-base leading-[18px] text-[#49497D]">
 								add report
@@ -67,28 +84,7 @@ const Profile = () => {
 						</button>
 					</div>
 
-					{true ? (
-						<Nothing />
-					) : (
-						<div className="grid grid-cols-4 items-center  space-y-[13px]">
-							{patientMedicalRecord?.map((item, index) => (
-								<div
-									key={index}
-									className="capitalize border-[#F3F3F4] border-b py-3"
-								>
-									<p className="text-xs leading-[14px] text-[#646464] mb-[6px]">
-										{item?.title}
-									</p>
-									<p className="text-[#323232] text-sm leading-4 font-medium">
-										{item?.description}
-									</p>
-								</div>
-							))}
-							<button className="ml-auto">
-								<img src={downloadIcon} alt="" />
-							</button>
-						</div>
-					)}
+					{true ? <Nothing /> : <MedicalRecordsList />}
 				</div>
 			</div>
 		</main>
