@@ -5,6 +5,9 @@ import { Button } from "../input";
 import logo from "@/assets/logo/telemed.svg";
 import { navLinks } from "@/utils/data";
 
+
+
+
 const NavBar = () => {
 	return (
 		<div className="layout-container py-4 flex items-center justify-between">
