@@ -1,8 +1,16 @@
 import DashboardLayout from "@/components/dashboard-layout";
 import Layout from "@/components/layout";
-import { Doctor, Doctors, Home } from "@/pages";
-import { links } from "@/utils/data";
-import React from "react";
+import {
+	Doctor,
+	Doctors,
+	Home,
+	Meeting,
+	Message,
+	Patient,
+	Patients,
+	Profile,
+	VideoCall
+} from "@/pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const AppRouter = () => {
@@ -13,8 +21,14 @@ const AppRouter = () => {
 					<Route index element={<Home />} />
 				</Route>
 				<Route element={<DashboardLayout />}>
-					<Route path={links.doctors} element={<Doctors />} />
-					<Route path={`${links.doctors}/:id`} element={<Doctor />} />
+					<Route path="/doctors" element={<Doctors />} />
+					<Route path="doctors/:id" element={<Doctor />} />
+					<Route path="/Patients" element={<Patients />} />
+					<Route path="Patients/:id" element={<Patient />} />
+					<Route path="/message" element={<Message />} />
+					<Route path="/video-call" element={<VideoCall />} />
+					<Route path="/profile" element={<Profile />} />
+					<Route path="/meeting" element={<Meeting />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

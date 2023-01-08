@@ -1,20 +1,25 @@
 export const links = {
 	doctors: "/doctors",
 	appointment: "/appointment",
-	message: "/message"
+	message: "/message",
+    patients: "/patients",
 };
 
 export const navLinks = [
 	{
 		name: "doctors",
-		to: links.doctors
+		to: "/doctors"
 	},
 	{
-		name: "appointment",
-		to: links.appointment
+		name: "patients",
+		to: "/patients"
+	},
+	{
+		name: "profile",
+		to: "/profile"
 	},
 	{
 		name: "message",
-		to: links.message
+		to: "/message"
 	}
 ];
