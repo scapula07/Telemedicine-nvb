@@ -151,7 +151,7 @@ const Patient = () => {
 					>
 						<img src={plusIcon} alt="" className="" />
 						<p className="text-[#1F1F1F] text-base leading-[18px] capitalize font-bold">
-							add files
+							add report
 						</p>
 					</div>
 				</div>
