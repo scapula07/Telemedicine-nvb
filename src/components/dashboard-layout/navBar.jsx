@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
 import { Button } from "../input";
 import { navLinks } from "@/utils/data";
+import ConnectBtn from "../ConnectBtn";
 
 // images
 import logo from "@/assets/logo/telemed.svg";
 
+
+
+
 const NavBar = () => {
 	return (
 		<div className="layout-container h-[76px] flex items-center justify-between">
-			<Link to="/">
+		<Link to="/">
 				<img src={logo} alt="" className="w-[132px] h-[26px]" />
 			</Link>
 			<nav>
@@ -20,7 +24,7 @@ const NavBar = () => {
 					))}
 				</ul>
 			</nav>
-			<Button title="book  appointment" className="bg-[#20494F]" />
+			<ConnectBtn />
 		</div>
 	);
 };

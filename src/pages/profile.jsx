@@ -5,6 +5,7 @@ import editIcon from "@/assets/icons/edit-icon.svg";
 import plusIcon from "@/assets/icons/plus.svg";
 import downloadIcon from "@/assets/icons/download.svg";
 import { Nothing } from "@/components/misc";
+import LitJsSdk from "@lit-protocol/sdk-browser";
 
 const Profile = () => {
 	return (

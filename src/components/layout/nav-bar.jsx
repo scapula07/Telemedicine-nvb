@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "../input";
+import ConnectBtn from "../ConnectBtn";
+
+
 
 // images
 import logo from "@/assets/logo/telemed.svg";
@@ -10,7 +13,7 @@ const NavBar = () => {
 			<Link href="/">
 				<img src={logo} alt="" className="w-[132px] h-[26px]" />
 			</Link>
-			<Button title="book  appointment" className="bg-[#20494F]" />
+			< ConnectBtn />
 		</div>
 	);
 };
