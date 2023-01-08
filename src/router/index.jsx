@@ -4,6 +4,7 @@ import {
 	Doctor,
 	Doctors,
 	Home,
+	Meeting,
 	Message,
 	Patient,
 	Patients,
@@ -27,6 +28,7 @@ const AppRouter = () => {
 					<Route path="/message" element={<Message />} />
 					<Route path="/video-call" element={<VideoCall />} />
 					<Route path="/profile" element={<Profile />} />
+					<Route path="/meeting" element={<Meeting />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

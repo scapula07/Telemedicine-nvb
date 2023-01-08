@@ -3,14 +3,13 @@ import { patientDetails } from "@/utils/data/dummy-data";
 import { MedicalRecordsList } from "@/components/section/profile";
 import { Nothing } from "@/components/misc";
 import { AddReport, EditProfile } from "@/components/modals";
+import LitJsSdk from "@lit-protocol/sdk-browser";
 
 // images
 import avatar from "@/assets/avatar/1.svg";
 import editIcon from "@/assets/icons/edit-icon.svg";
 import plusIcon from "@/assets/icons/plus.svg";
 import downloadIcon from "@/assets/icons/download.svg";
-import { Nothing } from "@/components/misc";
-import LitJsSdk from "@lit-protocol/sdk-browser";
 
 const Profile = () => {
 	const [showAddMedicalRecord, setShowAddMedicalRecord] = useState(false);

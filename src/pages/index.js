@@ -6,3 +6,4 @@ export { default as Patient } from "./patients/[id]";
 export { default as Message } from "./message";
 export { default as VideoCall } from "./video-call";
 export { default as Profile } from "./profile";
+export {default as Meeting} from "./meeting"

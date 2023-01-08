@@ -13,6 +13,7 @@
     "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
     "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
     "@headlessui/react": "^1.7.7",
+    "@huddle01/huddle01-client": "^0.0.10",
     "@huddle01/huddle01-iframe": "^0.0.8",
     "@lit-protocol/sdk-browser": "^1.2.57",
     "@metamask/detect-provider": "^2.0.0",
