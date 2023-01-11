@@ -3,6 +3,9 @@
 Telemed is a platform for remote communication and consultation between medical doctors and patients.
 
 
+![openpoll](https://firebasestorage.googleapis.com/v0/b/scapula-57ce3.appspot.com/o/telemed%2FScreen%20Shot%202023-01-11%20at%2010.33.59%20AM.png?alt=media&token=390b5c11-760f-4e4a-8d06-2ad8615824a5)
+
+
 
 ## Table of contents
 
