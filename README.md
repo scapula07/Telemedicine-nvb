@@ -35,7 +35,11 @@ Our dapp include the following features;
 ###  Hackathon challanges  implementation 
 
 
+
+
 ###   ENS service
+
+
 
 The Ethereum Name Service (ENS) is a distributed, open, and extensible naming system based on the Ethereum blockchain.
 
@@ -77,3 +81,109 @@ We were able to integrate ENS into in our dapp using the Ethers js library to re
 
 
 ````
+
+
+
+
+### NFT gated access -NFTport API
+
+
+
+Patient on booking appointment or on registering on Telemed get an NFT token which serves as a form of registration ID.This NFT token is used to get the video conferencing by checking for ownership.
+
+
+
+````js
+       
+
+	      const minRegtNft=async()=>{
+		toast("Minting NFT")
+		  const options = {
+		  method: 'POST',
+		  headers: {
+	                accept: 'application/json',
+	                'content-type': 'application/json',
+		      Authorization: '5ac96cad-d645-41cc-880f-1e85c554dd4a'
+		   },
+		  body: JSON.stringify({
+	                       chain: 'goerli',
+			contract_address: '0xbb01D6DA9D221609D102f413e5A444888798075c',
+			metadata_uri: avater? avater :"https://i.redd.it/4iyd1x1xha681.jpg",
+			mint_to_address:  account
+		  })
+		};
+		
+		fetch('https://api.nftport.xyz/v0/mints/customizable', options)
+		  .then(response => response.json())
+		  .then(response => {
+			toast("NFT minted")
+			  setAccess(true)
+			  console.log(response)
+	
+		  })
+		  .catch(err => console.error(err));
+
+
+		  setShowBookAppointment(false)
+	
+	  }
+
+      
+
+
+
+````
+
+
+
+
+
+
+
+###  Video conferencing -huddle sdk
+
+
+Huddle sdk is use to implement the video conferencing feature between doctors and patients.
+
+
+
+
+````
+      import { huddleIframeApp,HuddleIframe,HuddleAppEvent} from "@huddle01/huddle01-iframe";
+      
+      const handleJoin = async () => {
+           try {
+                      await huddleClient.join("dev", {
+                                 address: "0x5c12DB1E016bEa19aeD67C125dc5b036e39320Cb",
+                                 wallet: "",
+                                 ens: "axit.eth"
+                      });
+
+                      console.log("joined");
+           } catch (error) {
+                      console.log({ error });
+           }
+    };
+
+           const iframeConfig = {
+                      roomUrl: "https://iframe.huddle01.com/1233",
+                      height: "450px",
+                      width: "80%"
+           }
+
+       
+       
+            useEffect(() => {
+            
+		huddleIframeApp.on(HuddleAppEvent.PEER_JOIN, (data) =>
+			console.log({ iframeData: data })
+		);
+		huddleIframeApp.on(HuddleAppEvent.PEER_LEFT, (data) =>
+			console.log({ iframeData: data })
+		);
+	}, []);
+  
+````
+
+
+
