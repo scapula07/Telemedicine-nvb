@@ -45,7 +45,7 @@ We were able to integrate ENS into in our dapp using the Ethers js library to re
 
 ````js
 
-           const connectWallet=async()=>{
+           const connectAccount=async()=>{
        
                 try{
            
