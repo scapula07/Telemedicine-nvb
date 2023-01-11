@@ -24,7 +24,7 @@ Telemed is a platform for remote communication and consultation between medical 
 Our dapp include the following features;
 
 1. Ethereum naming service integration - ENS service
-2. NFT gated access -NFTport API
+2. NFT miniting(Registration) -NFTport API
 3. Video conferencing -huddle sdk
 
 
@@ -89,7 +89,7 @@ We were able to integrate ENS into in our dapp using the Ethers js library to re
 
 
 
-### NFT gated access -NFTport API
+### NFT minting -NFTport API
 
 
 
